@@ -1,227 +1,568 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Información Oficial · TororoP2P</title>
-    <meta name="description" content="Información oficial de TororoP2P: plataforma segura para comprar y vender USDT entre personas con custodia, verificación y mediación.">
-    <meta name="theme-color" content="#07080e">
-    <!-- Google Fonts & FontAwesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --bg-color: #07080e;
-            --card-bg: #101221cc;
-            --border-color: #262a4a;
-            --primary: #6d5efc;
-            --primary-hover: #5b4be2;
-            --accent: #3ee08f;
-            --pink-accent: #ec4899;
-            --text-main: #f2f3ff;
-            --text-muted: #a3a8cf;
-            --transition: all 0.3s ease;
-        }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tororo P2P · Compra y vende USDT en Cuba con custodia</title>
+<meta name="description" content="Tororo es la P2P más segura de Cuba: compra y vende USDT pagando en CUP, MLC, Clásica o saldo móvil, con tus fondos en custodia y un administrador que respalda cada operación.">
+<meta name="theme-color" content="#0b0e11">
+<link rel="canonical" href="https://tororo.trade/info">
+<meta property="og:title" content="Tororo P2P · USDT y CUP con custodia">
+<meta property="og:description" content="Compra y vende USDT entre personas, con tus fondos protegidos y un administrador que respalda cada operación.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tororo.trade/info">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%23FCD535'/%3E%3Ccircle cx='20' cy='20' r='11' fill='none' stroke='%23181A20' stroke-width='2.5'/%3E%3Cpath d='M14 17h11l-3-3M26 23H15l3 3' fill='none' stroke='%23181A20' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+/* ============ CONFIGURACIÓN VISUAL ============ */
+:root{
+  --bg:#0a0d12;--bg2:#0f141b;--card:#141a23;--card2:#1a2230;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);
+  --tx:#f2f5f9;--mut:#9aa6b6;--acc:#FCD535;--acc2:#F0B90B;--ok:#2ee6a6;--ok2:#0ECB81;--blue:#4f8dff;--bad:#F6465D;
+  --r:20px;--sh:0 24px 60px -28px rgba(0,0,0,.8);
+}
+:root[data-theme=light]{
+  --bg:#f6f8fb;--bg2:#eef2f7;--card:#ffffff;--card2:#f3f6fa;--line:rgba(15,23,42,.09);--line2:rgba(15,23,42,.16);
+  --tx:#0f172a;--mut:#5b6678;--acc:#e0a800;--acc2:#c28f00;--ok:#0aa578;--ok2:#08906a;--blue:#2f6fe4;--sh:0 24px 60px -30px rgba(15,23,42,.25);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+img,svg{display:block;max-width:100%}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+section{padding:84px 0;position:relative;scroll-margin-top:70px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ok)}
+.eyebrow:before{content:"";width:22px;height:2px;background:var(--ok);border-radius:2px}
+h1,h2,h3{line-height:1.12;letter-spacing:-.02em}
+h2{font-size:clamp(28px,4.6vw,44px);margin:12px 0 14px;font-weight:800}
+.lead{color:var(--mut);font-size:clamp(16px,2vw,19px);max-width:62ch}
+.gold{background:linear-gradient(120deg,#FFE27A,var(--acc) 45%,var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+:root[data-theme=light] .gold{background:linear-gradient(120deg,#d99a00,#b07d00);-webkit-background-clip:text;background-clip:text}
+.mut{color:var(--mut)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:16px;font-weight:800;font-size:16px;transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn.p{background:linear-gradient(180deg,#FFE27A,var(--acc) 55%,var(--acc2));color:#181A20;box-shadow:0 10px 30px -10px rgba(252,213,53,.6)}
+.btn.p:hover{transform:translateY(-2px);box-shadow:0 16px 38px -10px rgba(252,213,53,.75)}
+.btn.g{border:1px solid var(--line2);background:rgba(255,255,255,.03)}
+.btn.g:hover{background:rgba(255,255,255,.08);transform:translateY(-2px)}
+:root[data-theme=light] .btn.g{background:#fff}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:var(--sh)}
+.grid{display:grid;gap:18px}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+/* ============ NAV ============ */
+nav.top{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,backdrop-filter .3s,border-color .3s;border-bottom:1px solid transparent;padding-top:env(safe-area-inset-top)}
+nav.top.sc{background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(16px) saturate(1.5);-webkit-backdrop-filter:blur(16px) saturate(1.5);border-color:var(--line)}
+.nv{display:flex;align-items:center;justify-content:space-between;height:64px;gap:14px}
+.lg{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.02em}
+.lg i{font-style:normal;color:var(--acc)}
+.nl{display:flex;gap:4px}
+.nl a{padding:8px 13px;border-radius:99px;font-size:14.5px;font-weight:600;color:var(--mut);transition:.2s}
+.nl a:hover,.nl a.on{color:var(--tx);background:var(--card2)}
+.nr{display:flex;align-items:center;gap:10px}
+.ib{width:40px;height:40px;border-radius:12px;border:1px solid var(--line2);display:grid;place-items:center;font-size:17px}
+.btn.sm{padding:10px 18px;font-size:14.5px;border-radius:13px}
+.burger{display:none}
+@media(max-width:900px){.nl{display:none}.burger{display:grid}.nl.open{display:flex;position:fixed;left:16px;right:16px;top:70px;flex-direction:column;background:var(--card);border:1px solid var(--line2);border-radius:20px;padding:10px;box-shadow:var(--sh)}.nl.open a{padding:14px 16px;font-size:16px}}
+@media(max-width:420px){.nr .btn.sm.g{display:none}}
+/* ============ HERO ============ */
+.hero{padding:132px 0 70px;overflow:hidden;position:relative}
+.hero:before{content:"";position:absolute;inset:-10% -20% auto -20%;height:80%;background:radial-gradient(50% 60% at 20% 20%,rgba(252,213,53,.14),transparent 70%),radial-gradient(45% 55% at 85% 30%,rgba(79,141,255,.18),transparent 70%),radial-gradient(40% 50% at 55% 90%,rgba(46,230,166,.12),transparent 70%);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;position:relative}
+.pillb{display:inline-flex;align-items:center;gap:9px;padding:8px 15px;border-radius:99px;background:rgba(46,230,166,.1);border:1px solid rgba(46,230,166,.35);color:var(--ok);font-weight:700;font-size:13.5px;margin-bottom:20px}
+.pillb b{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 rgba(46,230,166,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(46,230,166,0)}100%{box-shadow:0 0 0 0 rgba(46,230,166,0)}}
+.hero h1{font-size:clamp(38px,7vw,68px);font-weight:900;letter-spacing:-.035em}
+.hero .lead{margin:20px 0 30px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:99px;background:var(--card);border:1px solid var(--line);font-size:13.5px;font-weight:600;color:var(--mut)}
+.chip svg{width:16px;height:16px;color:var(--ok)}
+.stage{position:relative;aspect-ratio:1/1.02;max-width:480px;margin-inline:auto;width:100%}
+.orbit{position:absolute;inset:6%;border-radius:50%;border:1px dashed var(--line2);animation:spin 40s linear infinite}
+.orbit.o2{inset:20%;animation-duration:28s;animation-direction:reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.coin{position:absolute;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:17px;box-shadow:0 14px 30px -10px rgba(0,0,0,.6);animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-14px)}}
+.coin.u{background:#26A17B;color:#fff}.coin.c{background:linear-gradient(135deg,#fff,#d6e2ff);color:#1d3fa6;font-size:14px}.coin.m{background:linear-gradient(135deg,#4f8dff,#6f6bff);color:#fff;font-size:13px}.coin.k{background:linear-gradient(135deg,#FFE27A,#F0B90B);color:#181A20;font-size:13px}
+.phone{position:absolute;left:50%;top:50%;width:62%;transform:translate(-50%,-50%);background:var(--card);border:1px solid var(--line2);border-radius:34px;padding:14px;box-shadow:0 40px 80px -30px rgba(0,0,0,.8),0 0 0 8px rgba(255,255,255,.03)}
+.ph-h{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:800;margin-bottom:12px}
+.ph-h span{color:var(--ok)}
+.offer{background:var(--card2);border:1px solid var(--line);border-radius:16px;padding:11px 12px;margin-bottom:9px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.offer b{font-size:15px;display:block}.offer small{color:var(--mut);font-size:11px}
+.offer .go{background:var(--ok2);color:#06251b;font-weight:800;font-size:12px;padding:7px 12px;border-radius:10px}
+.lockrow{display:flex;align-items:center;gap:9px;margin-top:6px;padding:10px 12px;border-radius:14px;background:rgba(46,230,166,.1);border:1px solid rgba(46,230,166,.3);font-size:12px;font-weight:700;color:var(--ok)}
+.lockrow svg{width:18px;height:18px;flex:none}
+.toast{position:absolute;right:-2%;bottom:6%;background:var(--card);border:1px solid rgba(46,230,166,.4);border-radius:16px;padding:11px 14px;font-size:12.5px;font-weight:700;display:flex;gap:9px;align-items:center;box-shadow:var(--sh);animation:float 5s ease-in-out infinite}
+.toast i{font-style:normal;width:24px;height:24px;border-radius:50%;background:var(--ok);color:#06251b;display:grid;place-items:center;font-size:13px}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.stage{max-width:380px;order:-1;margin-bottom:-10px}.hero{padding-top:104px}}
+/* ============ TRUST BAR ============ */
+.bar{padding:0;margin-top:-6px}
+.bar .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--sh);overflow:hidden}
+.bar .it{padding:26px 22px;border-right:1px solid var(--line);text-align:center}
+.bar .it:last-child{border:0}
+.bar b{display:block;font-size:clamp(30px,4vw,42px);font-weight:900;letter-spacing:-.03em}
+.bar span{color:var(--mut);font-size:13.5px}
+@media(max-width:760px){.bar .wrap{grid-template-columns:repeat(2,1fr)}.bar .it:nth-child(2){border-right:0}.bar .it:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+/* ============ TABS / STEPS ============ */
+.seg{display:inline-flex;background:var(--card);border:1px solid var(--line2);border-radius:16px;padding:5px;margin:26px 0 22px}
+.seg button{padding:12px 22px;border-radius:12px;font-weight:800;font-size:15px;color:var(--mut);transition:.25s}
+.seg button.on{background:linear-gradient(180deg,#FFE27A,var(--acc));color:#181A20}
+.flow{display:grid;grid-template-columns:1fr 1.1fr;gap:26px;align-items:start}
+.steps{display:flex;flex-direction:column;gap:12px}
+.st{display:flex;gap:16px;padding:18px;border-radius:18px;border:1px solid var(--line);background:var(--card);cursor:pointer;transition:.3s;text-align:left;width:100%}
+.st .n{flex:none;width:38px;height:38px;border-radius:12px;background:var(--card2);display:grid;place-items:center;font-weight:900;transition:.3s}
+.st b{display:block;font-size:17px}
+.st small{color:var(--mut);font-size:14.5px;display:block;margin-top:3px}
+.st.on{border-color:rgba(252,213,53,.55);background:linear-gradient(180deg,rgba(252,213,53,.09),transparent),var(--card);transform:translateX(6px)}
+.st.on .n{background:var(--acc);color:#181A20}
+.shield{position:sticky;top:90px;min-height:340px;display:flex;flex-direction:column;justify-content:center;gap:18px;overflow:hidden}
+.shield .ic{width:84px;height:84px;border-radius:26px;background:rgba(46,230,166,.12);border:1px solid rgba(46,230,166,.4);display:grid;place-items:center;color:var(--ok);position:relative}
+.shield .ic:before,.shield .ic:after{content:"";position:absolute;inset:-1px;border-radius:26px;border:2px solid var(--ok);animation:ring 2.6s infinite;opacity:0}
+.shield .ic:after{animation-delay:1.3s}
+@keyframes ring{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.5);opacity:0}}
+.shield .ic svg{width:42px;height:42px}
+.shield h3{font-size:22px}
+.shield p{color:var(--mut);font-size:16px}
+.shield .tag{display:inline-block;margin-top:4px;padding:6px 12px;border-radius:99px;background:rgba(46,230,166,.1);color:var(--ok);font-weight:700;font-size:13px}
+.prog{height:4px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:auto}
+.prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ok),var(--acc));border-radius:4px}
+@media(max-width:860px){.flow{grid-template-columns:1fr}.shield{position:static;min-height:0}}
+/* ============ PROTECCIÓN ============ */
+.feat{grid-template-columns:repeat(3,1fr)}
+.fc{position:relative;overflow:hidden;transition:transform .3s,border-color .3s;cursor:default}
+.fc:hover{transform:translateY(-6px);border-color:rgba(46,230,166,.45)}
+.fc:before{content:"";position:absolute;inset:auto -30% -60% auto;width:70%;aspect-ratio:1;background:radial-gradient(circle,rgba(46,230,166,.16),transparent 70%);opacity:0;transition:.4s}
+.fc:hover:before{opacity:1}
+.fi{width:52px;height:52px;border-radius:16px;background:rgba(46,230,166,.1);border:1px solid rgba(46,230,166,.3);display:grid;place-items:center;color:var(--ok);margin-bottom:16px}
+.fi svg{width:26px;height:26px}
+.fc h3{font-size:19px;margin-bottom:8px}
+.fc p{color:var(--mut);font-size:15px}
+@media(max-width:900px){.feat{grid-template-columns:1fr 1fr}}@media(max-width:600px){.feat{grid-template-columns:1fr}}
+/* ============ IA ============ */
+.ai{background:linear-gradient(180deg,transparent,var(--bg2) 15%,var(--bg2) 85%,transparent)}
+.pipe{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:34px;position:relative}
+.pipe:before{content:"";position:absolute;left:8%;right:8%;top:34px;height:2px;background:linear-gradient(90deg,var(--ok),var(--blue),var(--acc));opacity:.35}
+.pp{position:relative;text-align:center;padding:0 6px;cursor:pointer}
+.pp .dot{width:68px;height:68px;margin:0 auto 14px;border-radius:50%;background:var(--card);border:2px solid var(--line2);display:grid;place-items:center;font-size:26px;transition:.4s;position:relative;z-index:1}
+.pp.on .dot{border-color:var(--acc);box-shadow:0 0 0 8px rgba(252,213,53,.12);transform:scale(1.08)}
+.pp b{display:block;font-size:15px}
+.pp small{color:var(--mut);font-size:12.5px}
+.aid{margin-top:28px;display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+.scan{position:relative;overflow:hidden;min-height:300px}
+.rcpt{background:#f3f5fa;color:#1c2333;border-radius:16px;padding:16px;font-size:13.5px;max-width:300px;margin-inline:auto;position:relative}
+.rcpt .tp{background:#1f6feb;color:#fff;border-radius:10px;padding:8px 12px;font-weight:700;margin-bottom:12px}
+.rcpt .r{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #e3e7f0;transition:.4s}
+.rcpt .r span{color:#6b7488}
+.rcpt .r.hit{background:rgba(31,169,113,.16);border-radius:8px;padding-inline:8px;margin-inline:-8px}
+.rcpt .r.hit b:after{content:" ✓";color:#1fa971}
+.rcpt .ex{position:absolute;right:10px;top:10px;font-size:10px;font-weight:800;letter-spacing:.1em;color:#e4001b;border:1px solid #e4001b;border-radius:6px;padding:2px 6px;transform:rotate(6deg);opacity:.75}
+.beam{position:absolute;left:0;right:0;height:46px;top:-50px;background:linear-gradient(180deg,transparent,rgba(46,230,166,.35),transparent);border-bottom:2px solid var(--ok);animation:beam 3.2s ease-in-out infinite}
+@keyframes beam{0%{top:-50px}100%{top:100%}}
+.res li{list-style:none;display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px;opacity:.35;transition:.5s}
+.res li.on{opacity:1}
+.res li i{font-style:normal;flex:none}
+.note{margin-top:14px;padding:14px 16px;border-radius:14px;background:rgba(252,213,53,.08);border:1px solid rgba(252,213,53,.3);font-size:14px;color:var(--mut)}
+.note b{color:var(--acc)}
+@media(max-width:860px){.pipe{grid-template-columns:1fr;gap:6px}.pipe:before{display:none}.pp{display:flex;gap:14px;align-items:center;text-align:left;padding:8px}.pp .dot{margin:0;width:54px;height:54px;font-size:22px;flex:none}.aid{grid-template-columns:1fr}}
+/* ============ MÉTODOS ============ */
+.cur{grid-template-columns:repeat(4,1fr);margin-top:30px}
+.cc{text-align:center;transition:.3s}
+.cc:hover{transform:translateY(-6px) rotate(-1deg)}
+.cc .big{font-size:34px;font-weight:900;margin-bottom:6px}
+.cc small{color:var(--mut);display:block;font-size:13.5px}
+.mrow{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
+.mrow span{padding:11px 18px;border-radius:99px;border:1px solid var(--line2);background:var(--card);font-weight:700;font-size:14.5px}
+@media(max-width:760px){.cur{grid-template-columns:1fr 1fr}}
+/* ============ CALCULADORA ============ */
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}.calc>*{min-width:0}
+.calc label{display:block;font-size:13px;font-weight:700;color:var(--mut);margin:16px 0 8px}
+.inp{display:flex;align-items:center;background:var(--card2);border:1px solid var(--line2);border-radius:16px;padding:4px 16px;transition:.2s}
+.inp:focus-within{border-color:var(--acc);box-shadow:0 0 0 4px rgba(252,213,53,.14)}
+.inp input{flex:1;min-width:0;background:none;border:0;outline:0;color:var(--tx);font:inherit;font-size:26px;font-weight:800;padding:12px 0}
+.inp span{color:var(--mut);font-weight:800}
+input[type=range]{width:100%;accent-color:var(--acc);margin-top:14px}
+.tabs2{display:flex;gap:8px;flex-wrap:wrap}
+.tabs2 button{padding:10px 16px;border-radius:12px;border:1px solid var(--line2);font-weight:700;font-size:14px;color:var(--mut);transition:.2s}
+.tabs2 button.on{background:var(--acc);color:#181A20;border-color:var(--acc)}
+.out .row{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.out .row:last-of-type{border:0}
+.out .row b{font-variant-numeric:tabular-nums}
+.out .big{margin-top:10px;padding:18px;border-radius:16px;background:rgba(46,230,166,.1);border:1px solid rgba(46,230,166,.35)}
+.out .big small{display:block;color:var(--mut);font-size:13px}
+.out .big strong{font-size:32px;font-weight:900;color:var(--ok);font-variant-numeric:tabular-nums}
+@media(max-width:860px){.calc{grid-template-columns:minmax(0,1fr)}}
+/* ============ HERRAMIENTAS ============ */
+.tools{grid-template-columns:repeat(4,1fr);margin-top:30px}
+.tl{padding:22px;transition:.3s}
+.tl:hover{transform:translateY(-6px);border-color:rgba(252,213,53,.5)}
+.tl .e{font-size:30px;margin-bottom:12px}
+.tl h3{font-size:17px;margin-bottom:6px}
+.tl p{color:var(--mut);font-size:14.5px}
+@media(max-width:1000px){.tools{grid-template-columns:1fr 1fr}}@media(max-width:560px){.tools{grid-template-columns:1fr}}
+.ref{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;background:linear-gradient(135deg,rgba(252,213,53,.1),rgba(46,230,166,.07)),var(--card);border:1px solid rgba(252,213,53,.3)}
+.ref .pct{font-size:clamp(70px,12vw,120px);font-weight:900;line-height:1}
+.ref ul{list-style:none;margin-top:14px;display:grid;gap:8px}
+.ref li{display:flex;gap:10px;color:var(--mut)}.ref li:before{content:"✓";color:var(--ok);font-weight:900}
+@media(max-width:760px){.ref{grid-template-columns:1fr}}
+/* ============ PASOS ============ */
+.go3{grid-template-columns:repeat(3,1fr);margin-top:34px;counter-reset:s}
+.go3 .card{position:relative;padding-top:44px}
+.go3 .card:before{counter-increment:s;content:counter(s);position:absolute;left:24px;top:-20px;width:44px;height:44px;border-radius:14px;background:var(--acc);color:#181A20;display:grid;place-items:center;font-weight:900;font-size:20px;box-shadow:0 10px 24px -8px rgba(252,213,53,.6)}
+.go3 h3{margin-bottom:8px;font-size:20px}.go3 p{color:var(--mut)}
+@media(max-width:760px){.go3{grid-template-columns:1fr;gap:34px}}
+/* ============ FAQ ============ */
+.faq{max-width:820px;margin:30px auto 0}
+.search{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line2);border-radius:16px;padding:4px 18px;margin-bottom:16px}
+.search input{flex:1;background:none;border:0;outline:0;color:var(--tx);font:inherit;padding:14px 0;font-size:16px}
+.qa{border:1px solid var(--line);background:var(--card);border-radius:18px;margin-bottom:10px;overflow:hidden;transition:border-color .3s}
+.qa.open{border-color:rgba(252,213,53,.5)}
+.qa button{width:100%;text-align:left;padding:18px 20px;display:flex;justify-content:space-between;gap:16px;font-weight:700;font-size:16.5px;align-items:center}
+.qa button i{flex:none;width:28px;height:28px;border-radius:50%;background:var(--card2);display:grid;place-items:center;font-style:normal;transition:.3s}
+.qa.open button i{transform:rotate(45deg);background:var(--acc);color:#181A20}
+.qa .a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s}
+.qa.open .a{grid-template-rows:1fr}
+.qa .a div{overflow:hidden}
+.qa .a p{padding:0 20px 20px;color:var(--mut);font-size:15.5px}
+.empty{text-align:center;color:var(--mut);padding:20px;display:none}
+/* ============ CTA FINAL ============ */
+.fin{padding:60px 0 90px}
+.fin .box{position:relative;overflow:hidden;text-align:center;padding:clamp(40px,7vw,80px) 24px;border-radius:32px;background:radial-gradient(60% 90% at 20% 0%,rgba(252,213,53,.22),transparent 70%),radial-gradient(60% 90% at 90% 100%,rgba(46,230,166,.2),transparent 70%),var(--card);border:1px solid var(--line2)}
+.fin h2{font-size:clamp(30px,5.6vw,54px);max-width:18ch;margin-inline:auto}
+.fin .cta{justify-content:center;margin-top:28px}
+.fin .lead{margin:14px auto 0}
+footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--mut);font-size:13.5px}
+footer .wrap{display:grid;gap:14px}
+.fl{display:flex;flex-wrap:wrap;gap:8px 22px}
+.fl a:hover{color:var(--tx)}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:40;width:56px;height:56px;border-radius:50%;background:var(--acc);display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(252,213,53,.5);transition:.3s}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:28px;height:28px;color:#181A20}
+.mob{display:none}
+@media(max-width:700px){.mob{display:flex;position:fixed;left:12px;right:84px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:39;transform:translateY(160%);transition:transform .4s}.mob.show{transform:none}.mob .btn{width:100%;box-shadow:0 18px 40px -10px rgba(0,0,0,.7),0 10px 30px -10px rgba(252,213,53,.6)}}
+.pb{position:fixed;top:0;left:0;height:3px;width:0;z-index:60;background:linear-gradient(90deg,var(--ok),var(--acc))}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="pb" id="pb"></div>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-        }
+<!-- ============ NAV ============ -->
+<nav class="top" id="nav"><div class="wrap nv">
+  <a href="#inicio" class="lg" aria-label="Tororo P2P">
+    <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lgG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE27A"/><stop offset="1" stop-color="#F0B90B"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lgG)"/><circle cx="20" cy="20" r="11" fill="none" stroke="#181A20" stroke-width="2.5"/><path d="M14 17h11l-3-3M26 23H15l3 3" fill="none" stroke="#181A20" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="30.5" cy="9.5" r="3" fill="#F6465D"/></svg>
+    <span>Tororo<i> P2P</i></span></a>
+  <div class="nl" id="nl">
+    <a href="#como">Cómo funciona</a><a href="#seguridad">Seguridad</a><a href="#ia">IA</a><a href="#comisiones">Comisiones</a><a href="#herramientas">Herramientas</a><a href="#faq">Preguntas</a>
+  </div>
+  <div class="nr">
+    <button class="ib" id="thm" aria-label="Cambiar tema">☀️</button>
+    <a class="btn sm g js-app" href="https://tororo.trade">Entrar</a>
+    <a class="btn sm p js-app" href="https://tororo.trade">Crear cuenta</a>
+    <button class="ib burger" id="bg" aria-label="Menú">☰</button>
+  </div>
+</div></nav>
 
-        html {
-            scroll-behavior: smooth;
-        }
+<main id="inicio">
+<!-- ============ HERO ============ -->
+<header class="hero"><div class="wrap">
+  <div>
+    <div class="pillb rv"><b></b> Plataforma P2P hecha para Cuba</div>
+    <h1 class="rv" style="--d:.05s">La P2P <span class="gold">más segura</span> de Cuba para tu USDT</h1>
+    <p class="lead rv" style="--d:.12s">Compra y vende USDT entre personas, pagando en <b>CUP, MLC, Clásica o saldo móvil</b>. Tus fondos quedan <b>en custodia</b> durante toda la operación y un <b>administrador</b> respalda cada paso.</p>
+    <div class="cta rv" style="--d:.2s">
+      <a class="btn p js-app" href="https://tororo.trade">Crear mi cuenta gratis <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn g" href="#como">Ver cómo funciona</a>
+    </div>
+    <div class="chips rv" style="--d:.28s">
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>USDT en custodia</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Mediación con pruebas</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Operaciones en minutos</span>
+    </div>
+  </div>
+  <div class="stage rv" style="--d:.15s" aria-hidden="true">
+    <div class="orbit"></div><div class="orbit o2"></div>
+    <div class="coin u" style="left:2%;top:12%">USDT</div>
+    <div class="coin c" style="right:2%;top:6%;animation-delay:-1.5s">CUP</div>
+    <div class="coin m" style="left:0;bottom:16%;animation-delay:-3s">MÓVIL</div>
+    <div class="coin k" style="right:4%;bottom:26%;animation-delay:-4.5s">MLC</div>
+    <div class="phone">
+      <div class="ph-h">Mercado <span>● En vivo</span></div>
+      <div class="offer"><div><b>25 USDT</b><small>Transfermóvil · ★ 4.9</small></div><div class="go">Comprar</div></div>
+      <div class="offer"><div><b>100 USDT</b><small>EnZona · ★ 5.0</small></div><div class="go">Comprar</div></div>
+      <div class="offer"><div><b>10 USDT</b><small>Saldo móvil · ★ 4.8</small></div><div class="go">Comprar</div></div>
+      <div class="lockrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>USDT bloqueados en custodia</div>
+    </div>
+    <div class="toast"><i>✓</i>Pago recibido · USDT liberados</div>
+  </div>
+</div></header>
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-            position: relative;
-        }
+<!-- ============ BARRA DE CONFIANZA ============ -->
+<div class="bar"><div class="wrap">
+  <div class="it rv"><b class="gold"><span data-n="100">0</span>%</b><span>de los USDT en custodia mientras operas</span></div>
+  <div class="it rv" style="--d:.08s"><b class="gold"><span data-n="30">0</span> min</b><span>para pagar; si no, se cancela sola</span></div>
+  <div class="it rv" style="--d:.16s"><b class="gold"><span data-n="15">0</span> min</b><span>y puedes pedir mediación al administrador</span></div>
+  <div class="it rv" style="--d:.24s"><b class="gold"><span data-n="72">0</span> h</b><span>de protección en pagos entre bancos</span></div>
+</div></div>
 
-        /* Fondo con efectos de brillo (Glow) */
-        .glow {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: 0;
-        }
-        .glow i {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.45;
-        }
-        .glow i:nth-child(1) {
-            width: 50vmax; height: 50vmax;
-            left: -15vmax; top: -15vmax;
-            background: radial-gradient(closest-side, rgba(109, 94, 252, 0.5), transparent);
-            animation: d1 14s ease-in-out infinite alternate;
-        }
-        .glow i:nth-child(2) {
-            width: 45vmax; height: 45vmax;
-            right: -15vmax; top: 25vh;
-            background: radial-gradient(closest-side, rgba(236, 72, 153, 0.25), transparent);
-            animation: d2 17s ease-in-out infinite alternate;
-        }
-        @keyframes d1 { to { transform: translate(6vmax, 6vmax); } }
-        @keyframes d2 { to { transform: translate(-6vmax, -6vmax); } }
+<!-- ============ CÓMO FUNCIONA ============ -->
+<section id="como"><div class="wrap">
+  <div class="rv"><span class="eyebrow">Cómo funciona</span><h2>Cada paso tiene <span class="gold">una protección</span></h2>
+  <p class="lead">Elige tu caso y toca un paso: te mostramos qué te protege en ese momento.</p></div>
+  <div class="seg rv" id="seg"><button class="on" data-k="buy">🛒 Si compro</button><button data-k="sell">💸 Si vendo</button></div>
+  <div class="flow">
+    <div class="steps" id="steps"></div>
+    <div class="card shield rv" id="shield">
+      <div class="ic" id="shIc"></div>
+      <div><h3 id="shT"></h3><p id="shP"></p><span class="tag" id="shG"></span></div>
+      <div class="prog"><i id="prog"></i></div>
+    </div>
+  </div>
+</div></section>
 
-        /* Contenedor principal */
-        .w {
-            position: relative;
-            z-index: 1;
-            max-width: 1080px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+<!-- ============ SEGURIDAD ============ -->
+<section id="seguridad"><div class="wrap">
+  <div class="rv"><span class="eyebrow">Seguridad</span><h2>Compradores y vendedores, <span class="gold">igual de cubiertos</span></h2>
+  <p class="lead">No somos un banco ni una casa de cambio: somos el árbitro que sostiene el dinero mientras ambas partes cumplen.</p></div>
+  <div class="grid feat" style="margin-top:34px">
+    <div class="card fc rv"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div><h3>USDT en custodia</h3><p>Cuando abres una operación, los USDT quedan bloqueados. El vendedor no puede retirarlos ni gastarlos hasta que se confirme el pago.</p></div>
+    <div class="card fc rv" style="--d:.07s"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Mediación con pruebas</h3><p>Si hay desacuerdo, el administrador revisa las capturas de ambos y el chat de la operación, y decide si libera o devuelve los USDT. Nada se decide sin pruebas.</p></div>
+    <div class="card fc rv" style="--d:.14s"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="9" cy="11" r="2"/><path d="M14 10h4M14 14h3M6 16c.6-1.5 2-2 3-2s2.4.5 3 2"/></svg></div><h3>Identidad verificada (KYC)</h3><p>Se hace una sola vez: carnet (frente y reverso) y una selfie sosteniéndolo. Un administrador lo revisa, así hay personas reales al otro lado.</p></div>
+    <div class="card fc rv"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.5 6.2L21 9l-5 4.4L17.5 20 12 16.6 6.5 20 8 13.4 3 9l6.5-.8z"/></svg></div><h3>Reputación visible</h3><p>Al terminar, ambos se califican. Las estrellas y el número de operaciones se ven en cada oferta para que elijas con confianza.</p></div>
+    <div class="card fc rv" style="--d:.07s"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M11 18h2M9 7h6"/></svg></div><h3>PIN y verificación en dos pasos</h3><p>Protege tus retiros con un PIN y activa la verificación en dos pasos. Verás también tus accesos recientes.</p></div>
+    <div class="card fc rv" style="--d:.14s"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6M5 10v8M19 10v8M9 10v8M15 10v8M3 20h18"/></svg></div><h3>Pagos entre bancos, congelados</h3><p>Si pagas desde otro banco lo marcas antes de pagar y la operación se congela hasta que el vendedor confirme que le llegó. Pasadas 72 h sin respuesta, te avisamos y puedes pedir mediación.</p></div>
+  </div>
+  <div class="card rv" style="margin-top:22px;display:flex;gap:18px;align-items:flex-start;border-color:rgba(246,70,93,.4)">
+    <div style="font-size:30px">⚠️</div>
+    <div><h3 style="font-size:19px;margin-bottom:6px">Una regla de oro: paga solo a los datos que muestra la operación</h3>
+    <p class="mut">Ni el soporte ni los administradores te pedirán claves, PIN ni pagos por otra vía. Si alguien te pide pagar fuera de Tororo, es una estafa.</p></div>
+  </div>
+</div></section>
 
-        /* Navbar */
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 24px 0;
-        }
+<!-- ============ IA ============ -->
+<section id="ia" class="ai"><div class="wrap">
+  <div class="rv"><span class="eyebrow">Inteligencia artificial</span><h2>Revisión de comprobantes con <span class="gold">OCR y varios modelos de IA</span></h2>
+  <p class="lead">Cuando el comprador sube su captura, el vendedor puede apoyarse en un análisis automático. Toca cada etapa.</p></div>
+  <div class="pipe rv" id="pipe">
+    <div class="pp on" data-i="0"><div class="dot">📸</div><b>Captura</b><small>El comprador sube su comprobante</small></div>
+    <div class="pp" data-i="1"><div class="dot">🔎</div><b>Lectura (OCR)</b><small>Se lee el texto de la imagen</small></div>
+    <div class="pp" data-i="2"><div class="dot">🧬</div><b>Análisis del archivo</b><small>Busca señales de edición</small></div>
+    <div class="pp" data-i="3"><div class="dot">🧠</div><b>IA avanzada</b><small>Revisión en la nube (opcional)</small></div>
+    <div class="pp" data-i="4"><div class="dot">🛡️</div><b>Decisión humana</b><small>Tú confirmas; el admin media</small></div>
+  </div>
+  <div class="aid">
+    <div class="card scan rv"><div class="rcpt"><span class="ex">EJEMPLO</span><div class="tp">Comprobante de transferencia</div>
+      <div class="r" data-h="0"><span>Monto</span><b>12.500,00 CUP</b></div><div class="r" data-h="1"><span>Fecha</span><b>Hoy</b></div><div class="r" data-h="2"><span>Destino</span><b>···· 0363</b></div><div class="r" data-h="3"><span>Estado</span><b>Completada</b></div><div class="r" data-h="4"><span>Nro. transacción</span><b>TRX88420…</b></div>
+      <div class="beam"></div></div></div>
+    <div class="card rv" style="--d:.1s"><h3 id="aiT" style="font-size:20px;margin-bottom:6px"></h3><p class="mut" id="aiP" style="margin-bottom:10px"></p>
+      <ul class="res" id="aiR"></ul>
+      <div class="note"><b>Es una ayuda, no un veredicto.</b> Una captura puede estar editada y la IA puede leer mal. Antes de confirmar, entra a tu cuenta y comprueba que el dinero llegó. La decisión final siempre es humana.</div></div>
+  </div>
+</div></section>
 
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 800;
-            font-size: 22px;
-            text-decoration: none;
-            color: var(--text-main);
-        }
+<!-- ============ MÉTODOS ============ -->
+<section id="metodos"><div class="wrap" style="text-align:center">
+  <div class="rv"><span class="eyebrow">Monedas y métodos</span><h2>Paga y cobra <span class="gold">como ya lo haces</span></h2>
+  <p class="lead" style="margin-inline:auto">Elige la moneda en la que quieres cobrar o pagar y el método que más te convenga.</p></div>
+  <div class="grid cur">
+    <div class="card cc rv"><div class="big gold">CUP</div><small>Peso cubano</small></div>
+    <div class="card cc rv" style="--d:.07s"><div class="big gold">MLC</div><small>Moneda libremente convertible</small></div>
+    <div class="card cc rv" style="--d:.14s"><div class="big gold">Clásica</div><small>Saldo Clásica (USD)</small></div>
+    <div class="card cc rv" style="--d:.21s"><div class="big gold">Móvil</div><small>Saldo móvil</small></div>
+  </div>
+  <div class="mrow rv"><span>Transfermóvil</span><span>EnZona</span><span>Zelle</span><span>PayPal</span><span>Tu banco</span></div>
+  <p class="mut rv" style="margin-top:18px;font-size:14px">Para otras monedas, guarda tus datos en Perfil → Mis datos de pago y elige el método desde el Mercado.</p>
+</div></section>
 
-        .logo-icon {
-            width: 38px;
-            height: 38px;
-            background: linear-gradient(135deg, #8b7cff, #4f8dff);
-            border-radius: 11px;
-            display: grid;
-            place-items: center;
-            color: white;
-            font-size: 18px;
-        }
+<!-- ============ COMISIONES ============ -->
+<section id="comisiones"><div class="wrap">
+  <div class="rv"><span class="eyebrow">Comisiones claras</span><h2>Sabes cuánto pagas <span class="gold">antes de confirmar</span></h2>
+  <p class="lead">Sin sorpresas: las comisiones vigentes siempre se muestran en pantalla antes de aceptar. Prueba la calculadora.</p></div>
+  <div class="calc">
+    <div class="card rv">
+      <div class="tabs2" id="ctabs"><button class="on" data-k="sell">Vender en el Mercado</button><button data-k="wd">Retirar</button><button data-k="dep">Depositar</button></div>
+      <label for="amt">Cantidad de USDT</label>
+      <div class="inp"><input id="amt" type="number" inputmode="decimal" min="0" step="any" value="50"><span>USDT</span></div>
+      <input type="range" id="rng" min="1" max="1000" value="50" aria-label="Cantidad">
+      <div id="dsel" style="display:none"><label>Tipo de depósito</label><div class="tabs2" id="dtabs"><button class="on" data-k="free">Gratis (manual)</button><button data-k="auto">Automático</button></div></div>
+    </div>
+    <div class="card out rv" style="--d:.1s" id="out"></div>
+  </div>
+  <p class="mut rv" style="margin-top:14px;font-size:13.5px">Las operaciones del Mercado cobran comisión al vendedor; el comprador no paga comisión extra. Los depósitos «Gratis» no tienen comisión, pero se acreditan manualmente con el TxID. Los retiros pueden tardar desde minutos hasta 24 horas según el tráfico de la red.</p>
+</div></section>
 
-        .logo-area b {
-            color: var(--accent);
-        }
+<!-- ============ HERRAMIENTAS ============ -->
+<section id="herramientas" style="background:linear-gradient(180deg,transparent,var(--bg2) 12%,var(--bg2) 88%,transparent)"><div class="wrap">
+  <div class="rv"><span class="eyebrow">Herramientas</span><h2>Todo para operar <span class="gold">más fácil y más rápido</span></h2></div>
+  <div class="grid tools">
+    <div class="card tl rv"><div class="e">🤖</div><h3>Asistente con voz</h3><p>Responde tus dudas y hace gestiones por ti: vender USDT, ver tus operaciones, publicar solicitudes y más. También puedes hablarle.</p></div>
+    <div class="card tl rv" style="--d:.06s"><div class="e">🎯</div><h3>Alertas del Mercado</h3><p>Dile qué oferta buscas («10 USDT» o «USDT a 950 CUP») y la vigilamos por ti. Te avisamos con sonido y notificación.</p></div>
+    <div class="card tl rv" style="--d:.12s"><div class="e">🙋</div><h3>«Quiero comprar»</h3><p>Publica cuántos USDT quieres y tu rango de precio. Los vendedores te ven y abren una orden contigo.</p></div>
+    <div class="card tl rv" style="--d:.18s"><div class="e">💬</div><h3>Chat en cada operación</h3><p>Habla con la otra parte dentro de la operación. Ese chat sirve de prueba si hay que mediar.</p></div>
+    <div class="card tl rv"><div class="e">👛</div><h3>Billetera USDT</h3><p>Depósitos por BNB Smart Chain (BEP20), con opción gratis o automática, y retiros con PIN.</p></div>
+    <div class="card tl rv" style="--d:.06s"><div class="e">⭐</div><h3>Calificaciones</h3><p>Estrellas y operaciones completadas en cada oferta, para elegir con quién operar.</p></div>
+    <div class="card tl rv" style="--d:.12s"><div class="e">🔔</div><h3>Avisos al instante</h3><p>Te avisamos de cada movimiento de tu operación para que no pierdas tiempo.</p></div>
+    <div class="card tl rv" style="--d:.18s"><div class="e">🌗</div><h3>Modo claro y oscuro</h3><p>Usa la app como más cómodo te resulte, de día o de noche.</p></div>
+  </div>
+  <div class="card ref rv" style="margin-top:26px">
+    <div><span class="eyebrow">Programa de referidos</span><h2 style="margin-top:10px">Invita y <span class="gold">gana de por vida</span></h2>
+      <p class="mut">En <b>Más → Referidos</b> tienes tu enlace personal. Cuando un amigo se registra con él, recibes el <b>0,25 % de cada venta que haga</b>, para siempre.</p>
+      <ul><li>Se paga de la comisión de la plataforma, no de tu amigo</li><li>Llega directo a tu saldo</li><li>Ves quiénes se registraron y quiénes ya operaron</li></ul></div>
+    <div style="text-align:center"><div class="pct gold">0,25%</div><div class="mut" style="font-weight:700">de cada venta de tus referidos</div></div>
+  </div>
+</div></section>
 
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
+<!-- ============ PRIMEROS PASOS ============ -->
+<section id="empezar"><div class="wrap" style="text-align:center">
+  <div class="rv"><span class="eyebrow">Empieza hoy</span><h2>Listo para operar en <span class="gold">3 pasos</span></h2></div>
+  <div class="grid go3" style="text-align:left">
+    <div class="card rv"><h3>Crea tu cuenta</h3><p>Regístrate con tu correo y elige un usuario. Es gratis y toma un minuto.</p></div>
+    <div class="card rv" style="--d:.08s"><h3>Verifica tu identidad</h3><p>Una sola vez: carnet y selfie. Un administrador lo revisa y te avisa.</p></div>
+    <div class="card rv" style="--d:.16s"><h3>Compra o vende</h3><p>Elige una oferta o publica la tuya. Tus USDT quedan protegidos desde el primer paso.</p></div>
+  </div>
+  <div class="cta rv" style="justify-content:center;margin-top:36px"><a class="btn p js-app" href="https://tororo.trade">Empezar ahora</a></div>
+</div></section>
 
-        .cuban-flag {
-            width: 30px;
-            height: 20px;
-            border-radius: 4px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-            display: inline-block;
-        }
-        .flag-svg { width: 100%; height: 100%; }
+<!-- ============ FAQ ============ -->
+<section id="faq"><div class="wrap">
+  <div style="text-align:center" class="rv"><span class="eyebrow">Preguntas frecuentes</span><h2>Lo que más nos preguntan</h2></div>
+  <div class="faq">
+    <div class="search rv"><span>🔎</span><input id="fq" type="search" placeholder="Busca: retiro, KYC, comisión…" aria-label="Buscar en preguntas"></div>
+    <div id="faqL"></div><div class="empty" id="fqE">No encontramos esa pregunta. Escríbenos a <a href="mailto:soporte@tororo.trade" style="color:var(--acc)">soporte@tororo.trade</a> y te ayudamos.</div>
+  </div>
+</div></section>
 
-        .nav-btn {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color);
-            color: var(--text-main);
-            padding: 10px 20px;
-            border-radius: 99px;
-            font-weight: 600;
-            font-size: 14px;
-            text-decoration: none;
-            transition: var(--transition);
-        }
+<!-- ============ CTA FINAL ============ -->
+<section class="fin"><div class="wrap"><div class="box rv">
+  <h2>Opera con <span class="gold">tranquilidad</span>. Opera con Tororo.</h2>
+  <p class="lead">Únete a la comunidad que está moviendo el mercado P2P en Cuba con custodia, mediación y herramientas pensadas para ti.</p>
+  <div class="cta"><a class="btn p js-app" href="https://tororo.trade">Crear mi cuenta gratis</a><a class="btn g" href="mailto:soporte@tororo.trade">✉️ Escribir a soporte</a></div>
+</div></div></section>
+</main>
 
-        .nav-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--primary);
-            transform: translateY(-1px);
-        }
+<footer><div class="wrap">
+  <div class="fl"><a href="https://tororo.trade">Entrar a la app</a><a href="#faq">Preguntas</a><a href="mailto:soporte@tororo.trade">soporte@tororo.trade</a><span>Términos y privacidad: dentro de la app, al crear tu cuenta</span></div>
+  <p>Tororo es un espacio donde los usuarios compran y venden USDT entre sí, con fondos retenidos en custodia durante la operación. No somos un banco ni una casa de cambio. Operar con criptomonedas implica riesgos: opera solo con lo que puedas manejar y verifica siempre los datos de pago.</p>
+  <p>© <span id="yr"></span> Tororo P2P</p>
+</div></footer>
 
-        /* Hero Section */
-        .hero {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 40px;
-            align-items: center;
-            padding: 40px 0 70px;
-        }
+<a class="wa" href="mailto:soporte@tororo.trade" aria-label="Escribir a soporte por correo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3.5 7l8.5 6 8.5-6"/></svg></a>
+<div class="mob" id="mob"><a class="btn p js-app" href="https://tororo.trade">Crear mi cuenta gratis</a></div>
 
-        .badge-tag {
-            display: inline-block;
-            background: linear-gradient(90deg, var(--primary), var(--pink-accent));
-            padding: 6px 16px;
-            border-radius: 99px;
-            font-size: 12.5px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            margin-bottom: 20px;
-        }
+<script>
+(()=>{
+/* ============ CONFIGURACIÓN (edita aquí si cambian las comisiones) ============ */
+const FEES={trade:1.75,withdraw:3,depAuto:0.4,depAutoFlat:0.10,depAutoFlatSmall:0.30,depSmallLimit:10};
+const APP_URL='https://tororo.trade';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const nf=(x,d=2)=>Number(x).toLocaleString('es',{minimumFractionDigits:d,maximumFractionDigits:d});
 
-        h1 {
-            font-size: clamp(32px, 5vw, 54px);
-            line-height: 1.1;
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 20px;
-        }
+/* enlaces a la app: conserva ?ref=CODIGO para el programa de referidos */
+try{const r=new URLSearchParams(location.search).get('ref');if(r){const c=r.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,12);if(c)$$('.js-app').forEach(a=>a.href=APP_URL+'/?ref='+c)}}catch(e){}
+$('#yr').textContent=new Date().getFullYear();
 
-        h1 span {
-            background: linear-gradient(90deg, #a99cff, #f472b6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+/* tema */
+const root=document.documentElement;
+try{const t=localStorage.getItem('info_tema');if(t)root.dataset.theme=t}catch(e){}
+const paintT=()=>{$('#thm').textContent=root.dataset.theme==='dark'?'☀️':'🌙';document.querySelector('meta[name=theme-color]').content=root.dataset.theme==='dark'?'#0a0d12':'#f6f8fb'};paintT();
+$('#thm').onclick=()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('info_tema',root.dataset.theme)}catch(e){}paintT()};
 
-        .lead {
-            color: var(--text-muted);
-            font-size: clamp(16px, 2vw, 18px);
-            margin-bottom: 30px;
-        }
+/* nav */
+const nav=$('#nav'),pb=$('#pb'),mob=$('#mob');
+const onScroll=()=>{const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;nav.classList.toggle('sc',y>20);pb.style.width=(h>0?y/h*100:0)+'%';mob.classList.toggle('show',y>560&&y<h-900)};
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+$('#bg').onclick=()=>$('#nl').classList.toggle('open');
+$$('#nl a').forEach(a=>a.onclick=()=>$('#nl').classList.remove('open'));
+const secs=$$('section[id]'),links=$$('#nl a');
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});secs.forEach(s=>so.observe(s));
 
-        .cta-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-        }
+/* reveal + contadores */
+const count=el=>{const t=+el.dataset.n;if(reduce){el.textContent=t;return}const t0=performance.now(),f=n=>{const k=Math.min(1,(n-t0)/1400);el.textContent=Math.round(t*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)};requestAnimationFrame(f)};
+const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('[data-n]').forEach(count);ro.unobserve(e.target)}}),{threshold:.15});
+$$('.rv').forEach(e=>ro.observe(e));
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 28px;
-            border-radius: 99px;
-            font-weight: 700;
-            font-size: 15px;
-            text-decoration: none;
-            transition: var(--transition);
-            cursor: pointer;
-            border: none;
-        }
+/* ============ CÓMO FUNCIONA ============ */
+const IC={
+ lock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>',
+ shield:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>',
+ check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg>',
+ clock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'};
+const FLOW={
+ buy:[
+  ['Eliges una oferta','Ves el precio, los métodos de pago y la reputación del vendedor antes de decidir.','Los USDT de la oferta ya están bloqueados: el vendedor no puede retirarlos ni gastarlos.','lock'],
+  ['Pagas directo al vendedor','Tienes 30 minutos para pagar por Transfermóvil, EnZona, Zelle, PayPal o tu banco y subir la captura.','Pagas solo a los datos que muestra la operación. Nadie te va a pedir pagar por otra vía.','clock'],
+  ['El vendedor confirma','Cuando le llega tu dinero, toca «Pago recibido».','Los USDT llegan solos a tu billetera, sin que tengas que hacer nada más.','check'],
+  ['¿Algún problema?','Si ya pagaste y el vendedor no responde en 15 minutos, pides la mediación.','El administrador revisa las capturas de ambos y el chat, y decide con pruebas.','shield']],
+ sell:[
+  ['Publicas tu oferta','Pones tu precio, la moneda en que cobras y tus datos de cobro.','Tus USDT quedan bloqueados en custodia mientras la oferta esté publicada: nadie puede tocarlos.','lock'],
+  ['El comprador paga y sube la captura','Recibes el pago directo en tu tarjeta o teléfono. El comprador tiene 30 minutos.','Si no paga a tiempo, la operación se cancela sola. Si paga desde otro banco, se congela hasta que confirmes que te llegó.','clock'],
+  ['Tú confirmas que llegó el dinero','Revisa tu cuenta y toca «Pago recibido». Si no llegó, toca «No he recibido».','Solo liberas cuando ves el dinero en tu cuenta.','check'],
+  ['¿Dicen que no recibiste?','Si hay desacuerdo, cualquiera de los dos puede pedir la mediación.','El administrador revisa las pruebas de ambos antes de liberar o devolver los USDT.','shield']]};
+let mode='buy',cur=0,timer;
+const steps=$('#steps'),prog=$('#prog');
+function drawSteps(){steps.innerHTML=FLOW[mode].map((s,i)=>`<button class="st ${i===cur?'on':''}" data-i="${i}"><span class="n">${i+1}</span><span><b>${s[0]}</b><small>${s[1]}</small></span></button>`).join('');
+  steps.querySelectorAll('.st').forEach(b=>b.onclick=()=>{cur=+b.dataset.i;drawSteps();restart(true)});
+  const s=FLOW[mode][cur];$('#shIc').innerHTML=IC[s[3]];$('#shT').textContent=s[0];$('#shP').textContent=s[1];$('#shG').textContent='🛡️ Te protege: '+s[2];}
+function restart(stop){clearInterval(timer);prog.style.transition='none';prog.style.width='0';if(stop||reduce)return;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{prog.style.transition='width 6s linear';prog.style.width='100%'}));
+  timer=setInterval(()=>{cur=(cur+1)%4;drawSteps();prog.style.transition='none';prog.style.width='0';requestAnimationFrame(()=>requestAnimationFrame(()=>{prog.style.transition='width 6s linear';prog.style.width='100%'}))},6000)}
+$$('#seg button').forEach(b=>b.onclick=()=>{mode=b.dataset.k;cur=0;$$('#seg button').forEach(x=>x.classList.toggle('on',x===b));drawSteps();restart(true)});
+drawSteps();
+new IntersectionObserver(([e])=>{if(e.isIntersecting)restart(false);else{clearInterval(timer)}},{threshold:.3}).observe($('#como'));
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), #8b5cf6);
-            color: white;
-            box-shadow: 0 10px 30px rgba(109, 94, 252, 0.4);
-        }
+/* ============ IA ============ */
+const AI=[
+ ['El comprador sube su captura','Es obligatoria para cada pago. El vendedor la ve en la operación junto al botón «Leer texto».',['📸 La captura queda guardada como prueba','🔒 Solo la ven las partes y el administrador']],
+ ['Lectura con OCR','La app lee el texto de la imagen y lo compara con la operación. En este paso la imagen no sale de tu dispositivo.',['✅ Monto: aparece lo que debe pagar','✅ Destino: coinciden los últimos dígitos','✅ Fecha y estado: es de hoy y está completada']],
+ ['Análisis del archivo','Se buscan señales de edición en los datos internos de la imagen y si se parece a capturas de otras operaciones.',['🧬 Metadatos y rastros de edición','🖼️ Imágenes repetidas en otras operaciones','⚠️ Te avisa si algo no cuadra']],
+ ['Revisión avanzada con IA','Si el vendedor lo pide, la captura se envía a Cloudflare (Workers AI) para un segundo análisis con modelos de IA. Hasta 3 por operación.',['🧠 Riesgo bajo, medio o alto','📄 Datos que leyó la IA para que los compares','ℹ️ Solo se envía si tú lo autorizas']],
+ ['Decisión humana','La IA orienta, pero no decide. El vendedor comprueba su cuenta; si hay disputa, el administrador revisa todo y resuelve.',['👀 Compruebas que el dinero llegó','⚖️ El administrador media con pruebas','🛡️ Los USDT siguen en custodia mientras tanto']]];
+let ai=0,aiT;
+function drawAI(i){ai=i;$$('.pp').forEach((p,k)=>p.classList.toggle('on',k===i));const a=AI[i];$('#aiT').textContent=a[0];$('#aiP').textContent=a[1];
+  $('#aiR').innerHTML=a[2].map(t=>`<li><i>${t.slice(0,2)}</i><span>${t.slice(2).trim()}</span></li>`).join('');
+  [...$('#aiR').children].forEach((li,k)=>setTimeout(()=>li.classList.add('on'),reduce?0:250+k*350));
+  $$('.rcpt .r').forEach(r=>r.classList.toggle('hit',i>=1&&i<=3&&+r.dataset.h<=(i===1?4:i===2?1:3)))}
+$$('.pp').forEach(p=>p.onclick=()=>{clearInterval(aiT);drawAI(+p.dataset.i)});
+drawAI(0);
+new IntersectionObserver(([e])=>{clearInterval(aiT);if(e.isIntersecting&&!reduce)aiT=setInterval(()=>drawAI((ai+1)%5),5200)},{threshold:.35}).observe($('#ia'));
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 14px 35px rgba(109, 94, 252, 0.6);
-        }
+/* ============ CALCULADORA ============ */
+let ck='sell',dk='free';
+const amt=$('#amt'),rng=$('#rng');
+function calc(){let a=Math.max(0,parseFloat(amt.value)||0),h='';
+  if(ck==='sell'){const f=a*FEES.trade/100;h=`<div class="row"><span>Publicas</span><b>${nf(a)} USDT</b></div><div class="row"><span>Comisión (${nf(FEES.trade,2)} %)</span><b>${nf(f,4)} USDT</b></div><div class="row"><span>Necesitas en tu saldo</span><b>${nf(a+f,4)} USDT</b></div><div class="big"><small>El comprador recibe</small><strong>${nf(a)} USDT</strong></div><p class="mut" style="margin-top:12px;font-size:13.5px">La comisión la paga el vendedor desde su saldo. El comprador no paga comisión extra.</p>`}
+  else if(ck==='wd'){const f=a*FEES.withdraw/100;h=`<div class="row"><span>Retiras</span><b>${nf(a)} USDT</b></div><div class="row"><span>Comisión (${nf(FEES.withdraw,1)} %)</span><b>${nf(f)} USDT</b></div><div class="big"><small>Recibes en tu wallet</small><strong>${nf(a-f)} USDT</strong></div><p class="mut" style="margin-top:12px;font-size:13.5px">Tarda desde minutos hasta 24 h según la red. Verifica bien la dirección.</p>`}
+  else if(dk==='free'){h=`<div class="row"><span>Depositas</span><b>${nf(a)} USDT</b></div><div class="row"><span>Comisión</span><b>0 USDT</b></div><div class="big"><small>Se acreditan</small><strong>${nf(a)} USDT</strong></div><p class="mut" style="margin-top:12px;font-size:13.5px">Envías el monto exacto que te indicamos, pegas el TxID y esperas la acreditación manual.</p>`}
+  else{const fl=a<FEES.depSmallLimit?FEES.depAutoFlatSmall:FEES.depAutoFlat,f=a*FEES.depAuto/100+fl,g=a;h=`<div class="row"><span>Quieres recibir</span><b>${nf(a)} USDT</b></div><div class="row"><span>Comisión (${nf(FEES.depAuto,1)} % + ${nf(fl)} USDT)</span><b>${nf(f)} USDT</b></div><div class="big"><small>Debes enviar</small><strong>${nf(a+f)} USDT</strong></div><p class="mut" style="margin-top:12px;font-size:13.5px">Sin TxID: el saldo se acredita solo, por BNB Smart Chain (BEP20). La app te muestra el monto exacto a enviar.</p>`}
+  $('#out').innerHTML=h;$('#dsel').style.display=ck==='dep'?'block':'none'}
+amt.oninput=()=>{rng.value=Math.min(1000,amt.value||0);calc()};rng.oninput=()=>{amt.value=rng.value;calc()};
+$$('#ctabs button').forEach(b=>b.onclick=()=>{ck=b.dataset.k;$$('#ctabs button').forEach(x=>x.classList.toggle('on',x===b));calc()});
+$$('#dtabs button').forEach(b=>b.onclick=()=>{dk=b.dataset.k;$$('#dtabs button').forEach(x=>x.classList.toggle('on',x===b));calc()});
+calc();
 
-        .btn-outline {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid var(--border-color);
-            color: var(--text-main);
-        }
-
-        .btn-outline:hover {
-            background
+/* ============ FAQ ============ */
+const FAQ=[
+ ['¿Cómo compro USDT?','En Mercado elige una oferta y toca «Comprar». Verás los datos del vendedor: haz el pago por Transfermóvil, EnZona, Zelle, PayPal o tu banco dentro de 30 minutos y sube la captura. Cuando el vendedor confirme que recibió el dinero, los USDT llegan solos a tu billetera.'],
+ ['¿Cómo vendo USDT?','En Mercado toca «+ Vender USDT», elige la moneda en la que quieres cobrar (CUP, MLC, Saldo Clásica o Saldo móvil), pon tu precio y tus datos de cobro. Tus USDT quedan bloqueados mientras la oferta esté publicada.'],
+ ['¿Qué es «Quiero comprar»?','Publicas cuántos USDT quieres, la moneda con la que pagas y el precio mínimo y máximo que aceptas. Los vendedores la ven en el Mercado y, si el precio les sirve, abren una orden contigo.'],
+ ['¿Qué hago cuando me pagan?','Revisa la captura del comprador y comprueba en tu cuenta que el dinero llegó. Si llegó, toca «Pago recibido» y los USDT se liberan al comprador. Si no, toca «No he recibido».'],
+ ['¿Y si el vendedor no confirma mi pago?','Si ya pagaste y el vendedor marca «No he recibido» o no responde en 15 minutos, toca «Solicitar mediación»: sube una captura de tus últimas operaciones y el número de referencia del pago. El administrador lo revisa y decide.'],
+ ['¿Qué pasa si no pago a tiempo?','Tienes 30 minutos para pagar y subir la captura. Si no, la operación se cancela sola y la oferta vuelve al mercado.'],
+ ['¿Qué es la verificación de identidad (KYC)?','Es obligatoria una sola vez para comprar, vender y retirar. Desde Perfil subes tu carnet (frente y reverso) y una selfie sosteniéndolo. El administrador la revisa y te avisa.'],
+ ['¿Cómo deposito USDT?','En Billetera, sección «Depositar USDT», eliges «Gratis» (sin comisión: envías el monto exacto, pegas el TxID y esperas la acreditación manual) o «Depósito automático» (sin TxID, con comisión de 0,4 % + 0,10 USDT). Se usa la red BNB Smart Chain (BEP20).'],
+ ['¿Cuánto demora un retiro?','Pueden demorar desde minutos hasta 24 horas, según el tráfico de la red. Puedes ver el estado en Billetera y en Historial.'],
+ ['¿Cómo funcionan los referidos?','En Más → Referidos tienes tu enlace. Cuando un amigo se registra con él, recibes el 0,25 % de cada venta que haga, de por vida.'],
+ ['¿Cómo protejo mi cuenta?','En Más → Seguridad puedes crear un PIN para los retiros y activar la verificación en dos pasos. También verás tus accesos recientes.'],
+ ['¿Para qué sirven las estrellas?','Al terminar una operación puedes calificar a la otra persona. Las estrellas y el número de operaciones se ven en cada oferta para que elijas con confianza.'],
+ ['¿La IA decide si un pago es real?','No. La revisión con OCR y con IA avanzada es una ayuda: puede equivocarse con capturas borrosas y una captura bien editada puede pasar. Siempre debes comprobar en tu cuenta que el dinero llegó; en una disputa decide el administrador con las pruebas.']];
+const L=$('#faqL');
+L.innerHTML=FAQ.map((f,i)=>`<div class="qa" data-q="${(f[0]+' '+f[1]).toLowerCase()}"><button aria-expanded="false" data-i="${i}">${f[0]}<i>+</i></button><div class="a"><div><p>${f[1]}</p></div></div></div>`).join('');
+L.querySelectorAll('.qa button').forEach(b=>b.onclick=()=>{const q=b.parentElement,o=q.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+$('#fq').oninput=e=>{const v=e.target.value.trim().toLowerCase();let n=0;L.querySelectorAll('.qa').forEach(q=>{const m=!v||q.dataset.q.includes(v);q.style.display=m?'':'none';if(m)n++});$('#fqE').style.display=n?'none':'block'};
+})();
+</script>
+</body>
+</html>
