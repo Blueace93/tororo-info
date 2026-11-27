@@ -2,12 +2,8 @@
   "name": "tororo-info",
   "compatibility_date": "2026-11-11",
   "assets": {
-    "directory": "./public",
-    "binding": "ASSETS",
+    "directory": ".",
     "html_handling": "auto-trailing-slash",
-    "not_found_handling": "none",
-    "run_worker_first": true
+    "not_found_handling": "none"
   }
-  // No se incluyen "routes" ni "workers_dev" a propósito: las rutas ya existen en Cloudflare y no se tocan.
-  // Si tu wrangler.jsonc actual ya tiene un bloque "routes", déjalo tal cual.
 }
